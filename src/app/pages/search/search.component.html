@@ -1,1 +1,64 @@
-<p>search works!</p>
+<div class="row">
+  <!-- Label and Select for From Station -->
+  <div class="mb-3">
+    <label for="fromStation" class="form-label">From Station</label>
+    <select
+      id="fromStation"
+      class="form-select"
+      aria-label="Default select example"
+    >
+      <option disabled selected>Select From Station</option>
+      <option value="1"></option>
+    </select>
+  </div>
+
+  <!-- Label and Select for To Station -->
+  <div class="mb-3">
+    <label for="toStation" class="form-label">To Station</label>
+    <select
+      id="toStation"
+      class="form-select"
+      aria-label="Default select example"
+    >
+      <option disabled selected>Select To Station</option>
+      <option value="1"></option>
+    </select>
+  </div>
+
+  <!-- Label and Date Input -->
+  <div class="mb-3">
+    <label for="dateInput" class="form-label">Date</label>
+    <input id="dateInput" class="form-control" type="date" />
+  </div>
+  <div class="mb-3 btn">
+    <button type="button" class="btn btn-outline-primary">Modify Search</button>
+  </div>
+</div>
+<p class="searchRes">
+  <strong>4</strong> Result Found For <strong>Eljem</strong> To
+  <strong>Sousse</strong> on 08-09-2024
+</p>
+<div class="cards">
+  <div class="card" style="width: 25rem">
+    <div class="card-header">Train Rapide GNX140</div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">
+        With supporting text below as a natural lead-in to additional content.
+      </p>
+      <div class="btnP">
+        <button class="custom-btn btn-5"><span>Book Now</span></button>
+        <div class="product-availability" hidden>
+          <span class="availability-icon">&#10004;</span>
+          <!-- Icône de validation -->
+          <span class="availability-text">Disponible</span>
+        </div>
+        <div class="product-unavailability">
+          <span class="unavailability-icon">&#10060;</span>
+          <!-- Icône de croix -->
+          <span class="unavailability-text">Indisponible</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

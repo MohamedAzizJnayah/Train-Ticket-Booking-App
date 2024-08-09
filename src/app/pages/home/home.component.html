@@ -1,0 +1,56 @@
+<h1>Book Ticket</h1>
+
+<div class="container">
+  <div class="row">
+    <!-- Label and Select for From Station -->
+    <div class="col-md-4 mb-3">
+      <label for="fromStation" class="form-label">From Station</label>
+      <select
+        id="fromStation"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option disabled selected>Select From Station</option>
+        <option *ngFor="let item of stationList" [value]="item.stationID">
+          {{ item.stationName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Label and Select for To Station -->
+    <div class="col-md-4 mb-3">
+      <label for="toStation" class="form-label">To Station</label>
+      <select
+        id="toStation"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option disabled selected>Select To Station</option>
+        <option *ngFor="let item of stationList" [value]="item.stationID">
+          {{ item.stationName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Label and Date Input -->
+    <div class="col-md-4 mb-3">
+      <label for="dateInput" class="form-label">Date</label>
+      <input id="dateInput" class="form-control" type="date" />
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Button -->
+    <div class="col-md-12 mb-3">
+      <button type="button" class="btn btn-outline-primary">Search</button>
+    </div>
+  </div>
+
+  <div class="imgBg">
+    <img
+      src="https://img.freepik.com/free-photo/view-3d-modern-high-speed-train_23-2150905421.jpg?t=st=1723155561~exp=1723159161~hmac=af7aef102d46a704f28c5361a451c8da46b48af3a27c84e5decd27f154de7168&w=360"
+      alt="Train Image"
+      style="width: 100%; height: auto"
+    />
+  </div>
+</div>
