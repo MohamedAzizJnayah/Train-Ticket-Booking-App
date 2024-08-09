@@ -1,0 +1,37 @@
+.bg-color {
+  background-color: rgb(32, 169, 255);
+}
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-brand {
+  margin-left: 100px;
+}
+.navbar-nav {
+  margin-right: 100px;
+  display: flex;
+  gap: 10px;
+}
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form,
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-select {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
