@@ -9,8 +9,10 @@
         id="fromStation"
         class="form-select"
         aria-label="Default select example"
+        [(ngModel)]="fromStation"
+        required
       >
-        <option disabled selected>Select From Station</option>
+        <option disabled selected value="0">Select From Station</option>
         <option *ngFor="let item of stationList" [value]="item.stationID">
           {{ item.stationName }}
         </option>
@@ -24,8 +26,10 @@
         id="toStation"
         class="form-select"
         aria-label="Default select example"
+        [(ngModel)]="toStation"
+        required
       >
-        <option disabled selected>Select To Station</option>
+        <option disabled selected value="0">Select To Station</option>
         <option *ngFor="let item of stationList" [value]="item.stationID">
           {{ item.stationName }}
         </option>
@@ -35,14 +39,22 @@
     <!-- Label and Date Input -->
     <div class="col-md-4 mb-3">
       <label for="dateInput" class="form-label">Date</label>
-      <input id="dateInput" class="form-control" type="date" />
+      <input
+        id="dateInput"
+        class="form-control"
+        type="date"
+        [(ngModel)]="date"
+        required
+      />
     </div>
   </div>
 
   <div class="row">
     <!-- Button -->
     <div class="col-md-12 mb-3">
-      <button type="button" class="btn btn-outline-primary">Search</button>
+      <button (click)="Search()" type="button" class="btn btn-outline-primary">
+        Search
+      </button>
     </div>
   </div>
 
@@ -53,4 +65,12 @@
       style="width: 100%; height: auto"
     />
   </div>
+</div>
+<div
+  class="alert alert-danger"
+  role="alert"
+  style="width: fit-content; text-align: center; margin: 0 0 18px 25%"
+  [hidden]="valide"
+>
+  {{ inValide }}
 </div>

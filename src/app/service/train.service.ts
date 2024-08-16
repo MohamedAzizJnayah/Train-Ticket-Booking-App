@@ -10,6 +10,9 @@ export class TrainService {
   
   getAllStation(){
     
-    return this.http.get("http://localhost/my-api/index.php");
+    return this.http.get("http://localhost/my-api/index.php")
+  }
+  getSearchPage(fromStation:number,toStation:number,date:string){
+    return this.http.get("http://localhost:4209/search/"+fromStation+"/"+toStation+"/"+date);
   }
 }

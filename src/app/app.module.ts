@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, FormsModule
   ],
   providers: [
     provideClientHydration(),
